@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Practicle Test </title>
+    <link href="~/Content/CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/CSS/AdminLTE.min.css" rel="stylesheet" />
+    <link href="~/Content/CSS/_all-skins.min.css" rel="stylesheet" />
+    <link href="~/Content/CSS/dataTables.bootstrap.css" rel="stylesheet" />    
+</head>
+<body class="skin-blue sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+
+            <a class="logo">
+
+                <span class="logo-mini"><b>P</b>T</span>
+
+                <span class="logo-lg"><b>Practlecle </b> Test</span>
+            </a>
+
+            <nav class="navbar navbar-static-top" role="navigation">
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <section class="sidebar">
+                <ul class="sidebar-menu">
+                    <li class="header"></li>
+                    <li class="active treeview">
+                        <a href="/Home/Index">
+                            <i class="fa fa-dashboard"></i> <span>Manager</span> <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="active"><a href="/Home/AddManager"><i class="fa fa-circle-o"></i> Add Manager</a></li>                            
+                        </ul>
+                    </li>
+                    <li class="active treeview">
+                        <a href="/Home/Employee">
+                            <i class="fa fa-dashboard"></i> <span>Employee</span> <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="active"><a href="/Home/AddEmployee"><i class="fa fa-circle-o"></i> Add Employee</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+
+        @RenderBody()
+    </div>
+
+    <script src="~/Scripts/jQuery-2.1.4.min.js"></script>
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+    <script src="~/Scripts/app.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#example1").DataTable();
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false
+            });
+        });
+    </script>
+</body>
+</html>
+
+
